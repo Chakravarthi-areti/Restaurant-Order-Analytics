@@ -38,20 +38,6 @@ ORDER BY repeat_custamt_in_totalamount DESC;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 5 RESTAURANTS HAVING LESS EFFICIENCY SCORE */
 
 select * from (
@@ -67,53 +53,6 @@ restaurants.restaurant_id = orders.restaurant_id
 group by 1 
 order by (avg(orders.delivery_time_taken))/(avg(orders.customer_rating_food) + avg(orders.customer_rating_delivery)) asc)b
 limit 5;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Most Loyal Customer having ordered items more than 3 times */
@@ -141,25 +80,6 @@ SELECT *
 FROM order10;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* restaurant having good cuiseines and good food rating,delivery rating  */
 
 WITH cte1 AS (
@@ -175,28 +95,6 @@ WITH cte1 AS (
 SELECT * FROM cte1;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*SALES IN a DAY  */
 
 SELECT 
@@ -210,23 +108,6 @@ SELECT
 FROM restaurants
 RIGHT JOIN orders ON restaurants.restaurant_id = orders.restaurant_id
 GROUP BY restaurants.cuisine WITH ROLLUP;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* REPEATED CUSTOMERS AMOUNT IN TOTAL SALES*/
@@ -272,26 +153,6 @@ rc.restaurant_id = nc.restaurant_id ;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* WHICH ZONE IS THE MOST PROFITABLE AND HIGHER ORDER RECEIVING AND GIVE THE RESTAURANTS IN THAT ZONE */
 
 
@@ -308,36 +169,6 @@ WHERE r.zone IN (
         limit 1
     ) sub
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -361,60 +192,6 @@ FROM HighVarianceRestaurants hv
 JOIN restaurants r ON hv.restaurant_id = r.restaurant_id
 JOIN orders o ON r.restaurant_id = o.restaurant_id
 ORDER BY hv.rating_variance;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -450,53 +227,6 @@ zone_analysis AS (
 )
 SELECT  * from zone_analysis
 order by d.order_count desc;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
