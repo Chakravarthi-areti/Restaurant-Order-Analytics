@@ -151,8 +151,6 @@ nc
 on 
 rc.restaurant_id = nc.restaurant_id ;
 
-
-
 /* WHICH ZONE IS THE MOST PROFITABLE AND HIGHER ORDER RECEIVING AND GIVE THE RESTAURANTS IN THAT ZONE */
 
 
@@ -169,9 +167,6 @@ WHERE r.zone IN (
         limit 1
     ) sub
 );
-
-
-
 
 
 /* restaurants with variance of rating > 2 */
@@ -192,8 +187,6 @@ FROM HighVarianceRestaurants hv
 JOIN restaurants r ON hv.restaurant_id = r.restaurant_id
 JOIN orders o ON r.restaurant_id = o.restaurant_id
 ORDER BY hv.rating_variance;
-
-
 
 
 /* Restautants and Order_Count in Zone*/
@@ -227,8 +220,6 @@ zone_analysis AS (
 )
 SELECT  * from zone_analysis
 order by d.order_count desc;
-
-
 
 /* RESTAURANTS HAVING HIGH DELIVERY TIME */
 
