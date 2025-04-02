@@ -334,6 +334,12 @@ OUTPUT :
 There is Higher Chance to increase the sales if we Open a South Indian restaurant in zone D
 
 
+## Click the below image for Project Presentation 
+
+[![Click the image for Project Presentation](https://github.com/Chakravarthi-areti/Restaurant-Order-Analytics_Using_MYSQL/blob/main/Restaurant_ord_pre_scrsht.png)](https://www.linkedin.com/feed/update/urn:li:activity:7300382982920359937/)
+
+
+
 
 
 
